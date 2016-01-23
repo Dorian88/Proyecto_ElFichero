@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.elfichero.elfichero"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:21.0.+'
+    //compile files('libs/commons-io-2.4.jar')
+    //compile 'org.jdom:jdom:2.0.0'
+    //compile 'com.parse.bolts:bolts-android:1.+'
+    //compile fileTree(dir: 'libs', include: 'Parse-*.jar')
+    compile files('libs/jdom-1.0.jar')
+}
